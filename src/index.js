@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter,Route} from 'react-router-dom';
 import App from './layout/App';
 
+import 'antd-mobile/dist/antd-mobile.css';
+import './main.scss';
+
 ReactDOM.render(
     <BrowserRouter>
         <Route component ={App}/>
