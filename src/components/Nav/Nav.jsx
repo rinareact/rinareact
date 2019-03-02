@@ -5,10 +5,22 @@ import "./Nav.scss"
 const Nav = props =>(
     <div className={"nav"}>
         <ul>
-            <NavLink to = "/home">首页</NavLink>
-            <NavLink to = "/kind">分类</NavLink>
-            <NavLink to = "/cart">购物车</NavLink>
-            <NavLink to = "/user">我的</NavLink>
+            <NavLink to = "/home">
+                <h6 className={"iconfont icon-all"}></h6>
+                <i>首页</i>
+            </NavLink>
+            <NavLink to = "/kind">
+                <h6 className={"iconfont icon-category"}></h6>
+                <i>分类</i>
+            </NavLink>
+            <NavLink to = "/cart">
+                <h6 className={"iconfont icon-cart"}></h6>
+                <i>购物车</i>
+            </NavLink>
+            <NavLink to = "/user">
+                <h6 className={"iconfont icon-account"}></h6>
+                <i>我的</i>
+            </NavLink>
         </ul>
     </div>
 );
