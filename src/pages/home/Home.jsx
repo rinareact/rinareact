@@ -23,7 +23,7 @@ class Com extends Component{
 
     render() {
         return(
-            <div className="box">
+            <div className="content">
                 <header className="header">
                     <div className="header-l">
                         <span className='iconfont iconsousuo'></span>
@@ -34,7 +34,7 @@ class Com extends Component{
                 <div className="banner">
                     <WingBlank>
                         <Carousel
-                        autoplay={false}
+                        autoplay={true}
                         infinite
                         beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
                         afterChange={index => console.log('slide to', index)}
@@ -80,8 +80,58 @@ class Com extends Component{
                         </li>
                     </ul>
                 </nav>
-                <div className="content">
-                    首页内容
+                <div className="shoplist">
+                    <div className="tb_box">
+                        <h2 className="tb_tit">
+                            礼品箱包
+                            <a className='more'>更多&gt;</a>
+                        </h2>
+                        <div className="tb_type">
+                            <a className="tb_floor">
+                                <img src="/images/t5.jpg" alt=""/>
+                            </a>
+                            <a className="tb_link tb_special">
+                                <img src="/images/t6.jpg" alt=""/>
+                            </a>
+                            <a className="tb_link">
+                                <img src="/images/t7.jpg" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="tb_box">
+                        <h2 className="tb_tit">
+                            礼品箱包
+                            <a className='more'>更多&gt;</a>
+                        </h2>
+                        <div className="tb_type">
+                            <a className="tb_floor">
+                                <img src="/images/t5.jpg" alt=""/>
+                            </a>
+                            <a className="tb_link tb_special">
+                                <img src="/images/t6.jpg" alt=""/>
+                            </a>
+                            <a className="tb_link">
+                                <img src="/images/t7.jpg" alt=""/>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="tb_box">
+                        <h2 className="tb_tit">
+                            礼品箱包
+                            <a className='more'>更多&gt;</a>
+                        </h2>
+                        <div className="tb_type">
+                            <a className="tb_floor">
+                                <img src="/images/t5.jpg" alt=""/>
+                            </a>
+                            <a className="tb_link tb_special">
+                                <img src="/images/t6.jpg" alt=""/>
+                            </a>
+                            <a className="tb_link">
+                                <img src="/images/t7.jpg" alt=""/>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

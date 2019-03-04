@@ -1,44 +1,15 @@
 @import '@/qunar/reset.scss';
 
-.box {
-  .navlist {
-    @include rect(100%, .76rem);
-    background-color: #fff;
-    ul {
-      @include flexbox();
-      @include rect(100%, 100%);
-      li {
-        @include flex();
-        @include flexbox();
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        img {
-          @include rect(.48rem, .48rem);
-        }
-        h4 {
-        }
-      }
-    }
-  }
-  .banner {
-    @include rect(100%, 2rem);
-    .am-wingblank,.am-wingblank-lg {
-      margin: 0;
-      .am-carousel-wrap-dot > span {
-        @include rect(.1rem, .1rem);
-        margin: 0 .06rem;
-        border: .01rem solid #f00;
-        background-color: #fff;
-      }
-      .am-carousel-wrap-dot-active > span {
-        background-color: #f00;
-      }
-    }
-  }
+.content {
+  overflow: auto;
+  height: 100%;
+  position:relative;
   .header {
     background-color: #000;
     @include rect(100%, .44rem);
+    position: fixed;
+    top: 0;
+    z-index: 1;
     .header-l {
       float: left;
       @include rect(3.15rem, .34rem);
@@ -68,4 +39,82 @@
       margin: .05rem .05rem 0 0;
     }
   }
-}
+  .navlist {
+    @include rect(100%, .76rem);
+    background-color: #fff;
+    ul {
+      @include flexbox();
+      @include rect(100%, 100%);
+      li {
+        @include flex();
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img {
+          @include rect(.48rem, .48rem);
+        }
+        h4 {
+          color: #666;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+  .banner {
+    @include rect(100%, 2rem);
+    margin-top: .44rem;
+    .am-wingblank,.am-wingblank-lg {
+      margin: 0;
+      .am-carousel-wrap-dot > span {
+        @include rect(.1rem, .1rem);
+        margin: 0 .06rem;
+        border: .01rem solid #f00;
+        background-color: #fff;
+      }
+      .am-carousel-wrap-dot-active > span {
+        background-color: #f00;
+      }
+    }
+  }
+    .shoplist {
+      background-color: #eee;
+      .tb_box {
+        margin-top: .1rem;
+        background-color: #fff;
+        border-top: .01rem solid #e5e5e5;
+        border-bottom: .01rem solid #e5e5e5;
+        @include rect(100%, 2.82rem);
+        .tb_tit {
+          @include rect(100%, .42rem);
+          text-indent: .1rem;
+          font: .2rem/.42rem "";
+          .more {
+            float: right;
+            font: .14rem/.42rem "";
+            margin-right: .13rem;
+          }
+        }
+        .tb_type {
+          height: 2.38rem;
+          border-top: .01rem solid #e5e5e5;
+          .tb_floor {
+            float: right;
+            img {
+              @include rect(1.865rem, 2.36rem);
+            }
+          }
+          .tb_link {
+            float: left;
+            border-right: .01rem solid #e5e5e5;
+            img {
+              @include rect(1.865rem, 1.18rem);
+            }
+          }
+          .tb_special {
+            border-bottom: .01rem solid #e5e5e5;
+          }
+        }
+      }
+    }
+  }

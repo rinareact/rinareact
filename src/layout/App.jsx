@@ -10,15 +10,15 @@ class App extends Component{
     render(){
         return(
             <BrowserRouter>
-            <div className={"box"}>
+            <div className="box">
                 <Switch>
-                    <Route path={"/home"} component = {Home}/>
-                    <Route path={"/kind"} component = {Kind}/>
-                    <Route path={"/cart"} component = {Cart}/>
-                    <Route path={"/user"} component = {User}/>
-                    <Redirect path={"/"} to={"/home"}/>
+                    <Route path="/home" component = {Home}/>
+                    <Route path="/kind" component = {Kind}/>
+                    <Route path="/cart" component = {Cart}/>
+                    <Route path="/user" component = {User}/>
+                    <Redirect path="/" to="/home"/>
                 </Switch>
-                <Nav />
+                <Nav className='nav' />
             </div>
             </BrowserRouter>
         )
