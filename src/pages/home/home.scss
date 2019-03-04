@@ -1,6 +1,41 @@
 @import '@/qunar/reset.scss';
 
 .box {
+  .navlist {
+    @include rect(100%, .76rem);
+    background-color: #fff;
+    ul {
+      @include flexbox();
+      @include rect(100%, 100%);
+      li {
+        @include flex();
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img {
+          @include rect(.48rem, .48rem);
+        }
+        h4 {
+        }
+      }
+    }
+  }
+  .banner {
+    @include rect(100%, 2rem);
+    .am-wingblank,.am-wingblank-lg {
+      margin: 0;
+      .am-carousel-wrap-dot > span {
+        @include rect(.1rem, .1rem);
+        margin: 0 .06rem;
+        border: .01rem solid #f00;
+        background-color: #fff;
+      }
+      .am-carousel-wrap-dot-active > span {
+        background-color: #f00;
+      }
+    }
+  }
   .header {
     background-color: #000;
     @include rect(100%, .44rem);
@@ -32,11 +67,5 @@
       font: .12rem/.34rem "";
       margin: .05rem .05rem 0 0;
     }
-  }
-  .banner {
-
-  }
-  .content {
-
   }
 }
