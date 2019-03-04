@@ -1,0 +1,42 @@
+@import '@/qunar/reset.scss';
+
+.box {
+  .header {
+    background-color: #000;
+    @include rect(100%, .44rem);
+    .header-l {
+      float: left;
+      @include rect(3.15rem, .34rem);
+      border-radius: .05rem;
+      background-color: #fff;
+      margin: .05rem 0 0 .05rem;
+      .iconsousuo {
+        float: left;
+        font-size: .25rem;
+        color: #7795ed;
+      }
+      .txt {
+        float: left;
+        @include rect(2.71rem, .2rem);
+        border: 0;
+        margin: .09rem 0 0 .05rem;
+      }
+    }
+    .header-r {
+      float: right;
+      @include rect(.42rem, .34rem);
+      background-color: #a599a5;
+      color: #ccc;
+      border-radius: .05rem;
+      text-align: center;
+      font: .12rem/.34rem "";
+      margin: .05rem .05rem 0 0;
+    }
+  }
+  .banner {
+
+  }
+  .content {
+
+  }
+}
