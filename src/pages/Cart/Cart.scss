@@ -1,15 +1,14 @@
 @import '../../qunar/reset.scss';
 
 .content{
+  background: #fff;
   .cart-top{
     @include rect(100%, 0.6rem);
-    //@include background-color(#eee);
+    background:#F5F5F9 ;
     font-size: 0.2rem;
     @include flexbox();
     @include justify-content(space-between);
     @include align-items();
-    //border-bottom: #eee 0.01rem solid;
-    box-shadow:0px 0px 0.4rem #ddd;
     span{
       text-align: center;
       line-height: 0.6rem;

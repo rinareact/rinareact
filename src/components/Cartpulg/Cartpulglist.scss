@@ -2,6 +2,7 @@
 
 .cart-content-list{
   @include rect(100%, auto);
+  float: left;
   .am-flexbox-align-center{
     @include rect(10%, 1.3rem);
     float: left;
@@ -10,7 +11,7 @@
     @include rect(85%, 1.3rem);
     float: left;
     margin-left: 5%;
-    border-bottom: #999 0.005rem solid;
+    border-bottom: #ccc 0.005rem solid;
     img {
       @include rect(30%, 90%);
       padding-top: 5%;
@@ -28,6 +29,7 @@
       margin-top: 0.12rem;
       width: 55%;
       float: left;
+      color: #666666;
     }
     h6{
       font-size: 0.15rem;
@@ -42,12 +44,35 @@
     padding-left: 15%;
     @include rect(100%, 0.5rem);
     float: left;
-    border-bottom: #999 0.01rem solid;
-    background:#F5F5F9 ;
+    border-bottom: #ddd 0.01rem solid;
     h6{
       float: left;
-      //@include rect(30%, 0.5rem);
       line-height: 0.5rem;
+      span{
+        color: #e24357;
+      }
+    }
+  }
+}
+.cart-content-list-foot{
+  float: right;
+  @include rect(100%, 0.5rem);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #F5F5F9;
+  .cart-content-list-footbutton{
+    float: right;
+    @include rect(30%, 0.5rem);
+  }
+  .cart-content-list-foottotal{
+    float: right;
+    @include rect(70%, 0.5rem);
+    h5{
+      float: right;
+      padding-right: 0.1rem;
+      line-height: 0.5rem;
+      font-size: 0.18rem;
       span{
         color: #e24357;
       }

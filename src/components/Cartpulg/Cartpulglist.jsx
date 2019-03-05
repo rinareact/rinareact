@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
 import "./Cartpulglist.scss"
-import { List, Checkbox, Flex, Stepper } from 'antd-mobile';
+import { List, Checkbox, Flex, Stepper, Button, WhiteSpace, WingBlank} from 'antd-mobile';
 
 const AgreeItem = Checkbox.AgreeItem;
 
 class Cartpulglist extends Component{
-    onChange = (val) => {
-        console.log(val);
-    };
     constructor(props) {
         super(props);
         this.state = {
@@ -15,8 +12,8 @@ class Cartpulglist extends Component{
         };
     };
     onChange1 = (val) => {
-        // console.log(val);
         this.setState({ val });
+        // console.log(val)
     };
 
     render() {
@@ -44,10 +41,17 @@ class Cartpulglist extends Component{
                                 min={1}
                                 value={this.state.val}
                                 onChange={this.onChange1}
-                            />}
+                            />
+                        }
                     >
                         <h6>小计：<span>￥998</span></h6>
                     </List.Item>
+                </div>
+                <div className={"cart-content-list-foot"}>
+                    <Button type="warning" className={"cart-content-list-footbutton"}>提交订单</Button>
+                    <div className={"cart-content-list-foottotal"}>
+                        <h5>合计：<span>￥0.00</span></h5>
+                    </div>
                 </div>
             </div>
         )
