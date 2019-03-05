@@ -1,7 +1,6 @@
 import React, { Component} from 'react'
 import './home.scss'
 import { Carousel, WingBlank } from 'antd-mobile';
-import 'antd-mobile/dist/antd-mobile.css';
 import List from '@/components/home/List.jsx';
 
 class Com extends Component{
@@ -35,7 +34,7 @@ class Com extends Component{
                 <div className="banner">
                     <WingBlank>
                         <Carousel
-                        autoplay={true}
+                        autoplay={false}
                         infinite
                         beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
                         afterChange={index => console.log('slide to', index)}
