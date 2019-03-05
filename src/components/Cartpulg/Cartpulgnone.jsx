@@ -14,7 +14,6 @@ class Cartpulgnone extends Component{
                     </NavLink>
                 </div>
             </div>
-
         )
     }
 }

@@ -4,9 +4,6 @@
   .cart-content-none{
     @include rect(100%, 2.5rem);
     text-align: center;
-    //@include flexbox();
-    ////@include justify-content();
-    //@include align-items();
     .cart-content-none-icon {
       @include rect(100%, auto);
       font-size: 1rem;

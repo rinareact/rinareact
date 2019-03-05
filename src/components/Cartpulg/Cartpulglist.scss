@@ -1,0 +1,57 @@
+@import '../../qunar/reset.scss';
+
+.cart-content-list{
+  @include rect(100%, auto);
+  .am-flexbox-align-center{
+    @include rect(10%, 1.3rem);
+    float: left;
+  }
+  .cart-content-list-card{
+    @include rect(85%, 1.3rem);
+    float: left;
+    margin-left: 5%;
+    border-bottom: #999 0.005rem solid;
+    img {
+      @include rect(30%, 90%);
+      padding-top: 5%;
+      float: left;
+    }
+    h4{
+      font-size: 0.2rem;
+      margin-left: 5%;
+      margin-top: 0.15rem;
+      float: left;
+    }
+    h5{
+      font-size: 0.17rem;
+      margin-left: 5%;
+      margin-top: 0.12rem;
+      width: 55%;
+      float: left;
+    }
+    h6{
+      font-size: 0.15rem;
+      margin-left: 5%;
+      margin-top: 0.1rem;
+      width: 55%;
+      float: left;
+      color: #e24357;
+    }
+  }
+  .am-list-item-middle{
+    padding-left: 15%;
+    @include rect(100%, 0.5rem);
+    float: left;
+    border-bottom: #999 0.01rem solid;
+    background:#F5F5F9 ;
+    h6{
+      float: left;
+      //@include rect(30%, 0.5rem);
+      line-height: 0.5rem;
+      span{
+        color: #e24357;
+      }
+    }
+  }
+
+}
