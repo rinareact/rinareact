@@ -7,7 +7,7 @@
     background-color: #fff;
     border-top: .01rem solid #e5e5e5;
     border-bottom: .01rem solid #e5e5e5;
-    @include rect(100%, 2.82rem);
+    width: 100%;
     .tb_tit {
       @include rect(100%, .42rem);
       text-indent: .1rem;
@@ -19,23 +19,18 @@
       }
     }
     .tb_type {
-      height: 2.38rem;
+      background-color: #e5e5e5;
       border-top: .01rem solid #e5e5e5;
-      .tb_floor {
-        float: right;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      a {
         img {
-          @include rect(1.865rem, 2.36rem);
+          @include rect(1.87rem, 1.87rem);
         }
       }
-      .tb_link {
-        float: left;
-        border-right: .01rem solid #e5e5e5;
-        img {
-          @include rect(1.865rem, 1.18rem);
-        }
-      }
-      .tb_special {
-        border-bottom: .01rem solid #e5e5e5;
+      .tb_spe {
+        margin-bottom: .01rem;
       }
     }
   }

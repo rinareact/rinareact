@@ -5,7 +5,7 @@ import { Route } from 'react-router-dom'
 class DetailApp extends Component {
   render () {
     return (
-      <Route path='/detail' component = { Detail }></Route>
+      <Route path='/detail/:id' component = { Detail }></Route>
     )
   }
 }
