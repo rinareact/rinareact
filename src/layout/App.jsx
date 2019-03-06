@@ -17,7 +17,7 @@ class App extends Component{
                     <Route path="/cart" component = {Cart}/>
                     <Route path="/user" component = {User}/>
                 </Switch>
-                <Redirect path="/" to="/home" />
+                <Redirect  path="/" to="/home" />
                 <Nav className='nav' />
             </div>
             </Router>

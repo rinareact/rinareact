@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Carousel, WingBlank } from 'antd-mobile';
+import { Carousel, WingBlank } from 'antd-mobile'
+import api from '@/api/detail/index'
 import './detail.scss'
 
 class Detail extends Component {
@@ -14,6 +15,12 @@ class Detail extends Component {
   }
 
   componentDidMount() {
+      const postID = this.props.match.params.id
+      console.log(postID)
+      api.requestDetail(postID).then(data => {
+        console.log(data)
+      })
+
     // simulate img loading
       setTimeout(() => {
           this.setState({
@@ -24,9 +31,9 @@ class Detail extends Component {
 
   render () {
     return (
-      <div class='detailpage'>
+      <div className='detailpage'>
         <header className="header">
-          <span className='iconfont icon2fanhui'></span>
+          <span className='iconfont icon2fanhui' onClick = { () => { this.props.history.go(-1) } }></span>
           <i className='title'>商品详情</i>
         </header>
         <div className="bannerone">
