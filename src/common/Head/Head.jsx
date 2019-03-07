@@ -8,7 +8,7 @@ const Head = (props) => {
       <NavBar
       mode="light"
       icon={<Icon type="left" />}
-      onLeftClick={() => this.props.history.go(-1)}
+      onLeftClick={() => props.src.history.go(-1)}
     >{props.title}</NavBar>
     </div>
   )

@@ -6,8 +6,8 @@ export default class Com extends Component{
   render () {
     return (
       <div className="content">
-        <Head title="会员登入"/>
-        <Logincontentwarp/>
+        <Head src={this.props} title="会员登入"/>
+        <Logincontentwarp history={this.props.history}/>
       </div>
     )
   }

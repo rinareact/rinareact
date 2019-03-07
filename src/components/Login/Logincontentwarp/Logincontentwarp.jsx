@@ -10,7 +10,9 @@ class Logincontent extends Component {
     super(props)
   }
   handle(){
-  window.location.href='/res'
+    // console.log(this)
+    this.props.history.push({pathname:'/res'})
+  //window.location.href='/res' //刷新跳转,不推荐
   }
   onChange = (val) => {
     console.log(val);
@@ -56,7 +58,7 @@ class Logincontent extends Component {
         <WingBlank>
           <WhiteSpace />
           <Button type="primary" inline size="large" className='anniu'>登入</Button>
-          <Button type="primary" inline size="large" className='anniu' onClick={this.handle}>注册</Button>
+          <Button type="primary" inline size="large" className='anniu' onClick={this.handle.bind(this)}>注册</Button>
         </WingBlank>
       </div>
     );
