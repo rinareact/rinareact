@@ -1,10 +1,15 @@
 import React,{Component} from 'react'
-import axios from 'axios'
 import api from '@/api/res'
 import './Rescontent.scss'
 import { List, InputItem, Toast, Button } from 'antd-mobile';
+import {Link} from 'react-router-dom'
+
+
 
 class Rescontent extends Component {
+  constructor(props){
+    super(props)
+  }
   state = {
     phoneError: false,
     passwordError: false,
@@ -14,7 +19,7 @@ class Rescontent extends Component {
     code: '',
     admin: ''
   }
-
+  
   // 提示错误
   onErrorClick = () => {
     // 手机号码错误提示
@@ -66,7 +71,7 @@ class Rescontent extends Component {
 
   // 验证码验证
   adminState (admin) {
-      if (admin.length < 6 && admin != '') {
+      if (admin.length < 5 && admin != '') {
         this.setState({
           adminError: true
         })
@@ -97,25 +102,28 @@ class Rescontent extends Component {
     })
   }
   // 注册
-  // register () {
-  //   axios.post('https://www.daxunxun.com/users/register', {
-  //     username: this.phone,
-  //     password: this.password
-  //   }).then(data => {
-  //     if (data.data === 2) {
-  //       Toast('该用户已注册')
-  //     } else if (data.data === 0) {
-  //       Toast('注册失败')
-  //     } else {
-  //       Toast('注册成功')
-  //       localStorage.getItem('isLogin','ok')
-  //       this.$router.push('/')
-  //     }
-  //   })
-  // }
+  register (username, password) {
+    console.log(username)
+    console.log(password)
+    api.resData({'username':username,'password':password})
+    .then(data => {
+      console.log(data)
+      if (data === 2) {
+        Toast.fail('该用户已注册')
+      } else if (data === 0) {
+        Toast.fail('注册失败')
+      } else {
+        Toast.info('注册成功')
+        localStorage.getItem('isLogin','ok')
+        this.props.history.push({pathname:'/home'})
+      }
+    })
+  }
+
   render() {
     return (
       <div className='bian'>
+        {/* 输入框 */}
         <List>
           <InputItem
             type="number"
@@ -152,6 +160,17 @@ class Rescontent extends Component {
               >发送验证码</Button>}
           />
         </List>
+        {/* 注册按钮 */}
+        <div className="zc">
+          <Button type="primary" onClick={this.register.bind(this,this.state.phone,this.state.password)}>注册</Button>
+        </div>
+        {/* 去登入的文字 */}
+        <div className='qdr'>
+          <p>
+            已有账号？
+            <Link to='/login'>去登入</Link>
+          </p>
+        </div>
       </div>
     )
   }

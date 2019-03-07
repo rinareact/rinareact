@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import Head from '@/common/Head/Head'
+import Head from '@/components/common/Head/Head'
 import Rescontent from '@/components/Res/Rescontent'
 
 export default class Com extends Component {
@@ -7,7 +7,7 @@ export default class Com extends Component {
     return (
       <div className="content">
         <Head src={this.props} title='会员注册'/>
-        <Rescontent/>
+        <Rescontent history={this.props.history}/>
       </div>
     )
   }
