@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Redirect, HashRouter as Router, Switch} from 'react-router-dom';
-import Home from '@/pages/home/Home.jsx';
+import Home from '@/pages/Home/Home.jsx';
 import Kind from '../pages/Kind';
 import Cart from '../pages/Cart';
 import User from '../pages/User';

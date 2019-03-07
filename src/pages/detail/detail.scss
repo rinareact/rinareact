@@ -5,22 +5,42 @@ html, body, #root {
 }
 .detailpage {
   background-color: #eee;
-  @include rect(100%, 18.11rem);
+  width: 100%;
   position: relative;
   .detail {
     .navpage {
+      padding-bottom: .5rem;
       .picture {
         @include rect(100%, 11.41rem);
+        display: block;
         img {
           @include rect(3.55rem, 11.21rem);
           margin-left: .1rem;
         }
       }
       .params {
-
+        display: none;
+        @include rect(100%, 100%);
+        .gpic {
+          @include rect(100%, 100%);
+          img {
+            @include rect(3.75rem, 3.75rem);
+          }          
+        }
+        .gname {
+          padding-left: .2rem;
+        }
+        .gsku {
+          padding-left: .2rem;
+        }
       }
       .comment {
-
+        display: none;
+        @include rect(100%, 3rem);
+        padding-top: .3rem;
+        span {
+          margin-left: .2rem;
+        }
       }
     }
     margin-top: .2rem;
@@ -34,6 +54,9 @@ html, body, #root {
       span {
         font: .16rem/.38rem "";
         padding: 0 .28rem;
+      }
+      .bor {
+        border-bottom: .02rem solid #f00;
       }
     }
   }
@@ -160,6 +183,9 @@ html, body, #root {
         font: 100 .12rem/.25rem "";
         color: #000;
         text-align: center;
+      }
+      .active {
+        border: .02rem solid #f00;
       }
     }
     .goodsnumber {
