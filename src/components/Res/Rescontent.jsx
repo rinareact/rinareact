@@ -4,8 +4,6 @@ import './Rescontent.scss'
 import { List, InputItem, Toast, Button } from 'antd-mobile';
 import {Link} from 'react-router-dom'
 
-
-
 class Rescontent extends Component {
   constructor(props){
     super(props)
@@ -14,25 +12,27 @@ class Rescontent extends Component {
     phoneError: false,
     passwordError: false,
     adminError: false,
-    phone: '18396813592',
+    phone: '15021275226',
     password: '',
     code: '',
-    admin: ''
+    admin: '',
+    disabled:false,
+    msg: '发送验证码',
   }
   
   // 提示错误
   onErrorClick = () => {
     // 手机号码错误提示
     if (this.state.phoneError) {
-      Toast.info('请输入11位正确手机的号码');
+      Toast.info('请输入11位正确手机的号码',2);
     }
     // 密码错误提示
     if (this.state.passwordError) {
-      Toast.info('请设置6位以上的密码');
+      Toast.info('请设置6位以上的密码',2);
     }
     // 验证码错误提示
     if (this.state.adminError) {
-      Toast.info('请输入正确的验证码')
+      Toast.info('请输入正确的验证码',2)
     }
   }
 
@@ -71,7 +71,9 @@ class Rescontent extends Component {
 
   // 验证码验证
   adminState (admin) {
-      if (admin.length < 5 && admin != '') {
+    console.log(admin)
+    console.log(this.state.code===admin)
+      if (this.state.code != admin && admin != '') {
         this.setState({
           adminError: true
         })
@@ -87,19 +89,35 @@ class Rescontent extends Component {
 
   //发送验证码
   sendCode (aphone) {
-    api.requestData(aphone)
-    .then(data => {
-      console.log(data)
-      if (data === 1) {
-        Toast.fail('该用户已注册')
-      } else if (data === 0 ) {
-        Toast.info('获取验证码失败')
-      } else {
-        console.log(data.code)
-        this.state.admin = data.code
-        // this.state.admin = 123456
-      }
-    })
+    if( this.state.phoneError === false && this.state.phone != '' && this.state.phone.length > 0 && this.state.passwordError === false && this.state.password != '' && this.state.password.length > 0 ){
+      api.requestData(aphone)
+      .then(data => {
+        console.log(data)
+        if (data === 1) {
+          Toast.fail('该用户已注册',2)
+        } else if (data === 0 ) {
+          Toast.info('获取验证码失败',2)
+        } else {
+          console.log(data.code)
+          this.state.code = data.code
+          // this.state.admin = 123456
+        }
+      })
+      let timer = null
+      let time = 5
+      timer = setInterval(() => {
+        this.setState({disabled : true})
+        this.setState({msg :time + '后重新发送'})
+        time --
+        if(time === 0) {
+          this.setState({msg :'发送验证码'})
+          this.setState({disabled : false})
+          clearInterval(timer)
+        }
+      },1000)
+    } else {
+      Toast.info('请填写正确的手机号码和密码',2)
+    }
   }
   // 注册
   register (username, password) {
@@ -109,18 +127,23 @@ class Rescontent extends Component {
     .then(data => {
       console.log(data)
       if (data === 2) {
-        Toast.fail('该用户已注册')
+        Toast.fail('该用户已注册',2)
       } else if (data === 0) {
-        Toast.fail('注册失败')
+        Toast.fail('注册失败',2)
       } else {
-        Toast.info('注册成功')
-        localStorage.getItem('isLogin','ok')
+        Toast.info('注册成功',2)
+        localStorage.setItem('isLogin','ok')
         this.props.history.push({pathname:'/home'})
       }
     })
   }
 
   render() {
+    // let disabled = false
+    let zcdisableb = true
+    if( this.state.phoneError === false && this.state.passwordError === false && this.state.adminError === false && this.state.admin.length>0 && this.state.phone.length > 0 && this.state.password.length > 0 ) {
+      zcdisableb = false
+    }
     return (
       <div className='bian'>
         {/* 输入框 */}
@@ -150,19 +173,24 @@ class Rescontent extends Component {
             onErrorClick={this.onErrorClick}
             onChange={this.adminState.bind(this)}
             value={this.state.admin}
-            maxLength='6'
+            maxLength='5'
             clear
             extra={<Button 
-              type="primary" 
+              type='primary'
               size="small" 
               inline 
+              disabled={this.state.disabled}
               onClick={ this.sendCode.bind(this,this.state.phone) }
-              >发送验证码</Button>}
+              >{this.state.msg}</Button>}
           />
         </List>
         {/* 注册按钮 */}
         <div className="zc">
-          <Button type="primary" onClick={this.register.bind(this,this.state.phone,this.state.password)}>注册</Button>
+          <Button
+            type='primary'
+            onClick={this.register.bind(this,this.state.phone,this.state.password)}
+            disabled={zcdisableb}
+            >注册</Button>
         </div>
         {/* 去登入的文字 */}
         <div className='qdr'>
