@@ -9,6 +9,13 @@ module.exports = function(app) {
         pathRewrite: { // 自己配置代理必须加这句话
           '^/daxun': ''
         }
+      },
+      '/api', {
+        target: 'http://39.96.196.70:3000/api/',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
       }
     )
   );
