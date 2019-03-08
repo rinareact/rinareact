@@ -1,5 +1,5 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
-import DetailStore from './Detail/reducer';
+import DetailStore from './Detail/reduce';
 //允许action返回一个函数
 import thunk from 'redux-thunk';
 
