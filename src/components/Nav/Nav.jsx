@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import "./Nav.scss"
-// import "../../pages/Cart/Cart"
+import "../../pages/Cart/Cart"
 
 const Nav = props =>(
     <div className={"nav"}>

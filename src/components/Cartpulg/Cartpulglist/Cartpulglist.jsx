@@ -18,7 +18,7 @@ class Cartpulglist extends Component{
 
     render() {
         return(
-            <div className={"content"}>
+            <div className={"content-cart"}>
                 <div className={"cart-content-list"} >
                     <Flex>
                         <Flex.Item>

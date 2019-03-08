@@ -6,12 +6,18 @@ import {Provider} from 'react-redux';
 
 
 import App from './layout/App';
+<<<<<<< HEAD
 import CartApp from './layout/CartApp';
+=======
+import UserApp from './layout/UserApp';
+
+>>>>>>> dev
 import 'antd-mobile/dist/antd-mobile.css';
 import './main.scss';
 
 
 ReactDOM.render(
+<<<<<<< HEAD
     <Provider store={store}>
         <BrowserRouter>
             <Switch>
@@ -20,5 +26,13 @@ ReactDOM.render(
             </Switch>
         </BrowserRouter>
     </Provider>,
+=======
+    <BrowserRouter>
+        <Switch>
+            <Route path='/userapp' component ={UserApp}/>
+            <Route path='/' component ={App}/>
+        </Switch>
+    </BrowserRouter>,
+>>>>>>> dev
     document.getElementById('root')
 );
