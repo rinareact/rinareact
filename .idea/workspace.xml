@@ -3,23 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="dba4acd5-d0fb-41fc-a3b6-66f1dd333a02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Head/Head.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Head/Head.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Head/Head.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Head/Head.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cartpulg/Cartpulglist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cartpulg/Cartpulglist/Cartpulglist.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cartpulg/Cartpulglist.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cartpulg/Cartpulglist/Cartpulglist.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cartpulg/Cartpulgnone.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cartpulg/Cartpulgnone/Cartpulgnone.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cartpulg/Cartpulgnone.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cartpulg/Cartpulgnone/Cartpulgnone.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Nav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/User/Userhead/Userhead.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/User/Userhead/Userhead.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/CartApp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/UserApp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Res.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Res.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/User.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,21 +16,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Login/Logincontentwarp/Logincontentwarp.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/layout/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
-              <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -55,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="336">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -68,13 +40,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/layout/UserApp.jsx">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="21">
+              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -82,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="231">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -142,11 +111,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="304" />
-    <option name="y" value="58" />
-    <option name="width" value="1392" />
-    <option name="height" value="1032" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1943" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -167,6 +136,18 @@
               <item name="lining" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="lining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lining" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lining" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lining" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -181,15 +162,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Rina\Desktop\lining\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Rina\Desktop\lining\src\components\Cartpulg\Cartpulgnone" />
       <recent name="C:\Users\Rina\Desktop\lining\src\components\Cartpulg\Cartpulglist" />
       <recent name="C:\Users\Rina\Desktop\lining\src\components" />
       <recent name="C:\Users\Rina\Desktop\lining\src\components\Cartpulg" />
       <recent name="C:\Users\Rina\Desktop\lining\src\pages\Cart" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rina\Desktop\lining\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -228,12 +209,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82804000" />
+    <option name="totallyTimeSpent" value="83113000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="203" y="39" width="928" height="688" extended-state="0" />
+    <frame x="-7" y="-7" width="1295" height="703" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21860987" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15488483" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -387,7 +368,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/User/Userhead/Userhead.jsx">
       <provider selected="true" editor-type-id="text-editor">
@@ -458,8 +443,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="231">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -475,8 +460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state relative-caret-position="336">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -496,7 +481,7 @@
     <entry file="file://$PROJECT_DIR$/src/layout/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="10" column="15" lean-forward="true" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
