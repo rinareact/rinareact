@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { Route, Redirect, Switch} from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import Kind from '../pages/Kind';
-// import Cart from '../pages/Cart/Cart';
+import Cart from '../pages/Cart/Cart';
 import User from '../pages/User';
-import Login from '../pages/Login';
-import Res from '../pages/Res';
 import Nav from "../components/Nav/Nav";
 
 class  App extends Component{
@@ -17,8 +15,6 @@ class  App extends Component{
                     <Route path="/kind" component = {Kind}/>
                     <Route path="/cart" component = {Cart}/>
                     <Route path="/user" component = {User}/>
-                    <Route path="/login" component = {Login}/>
-                    <Route path="/res" component = {Res}/>
                     <Redirect path="/" to="/home"/>
                 </Switch>
                 <Nav />

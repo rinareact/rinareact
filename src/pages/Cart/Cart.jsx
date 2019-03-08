@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import "./Cart.scss"
-import Cartpulgnone from "../../components/Cartpulg/Cartpulgnone";
-import Cartpulglist from "../../components/Cartpulg/Cartpulglist";
+import Cartpulgnone from "../../components/Cartpulg/Cartpulgnone/Cartpulgnone";
+import Cartpulglist from "../../components/Cartpulg/Cartpulglist/Cartpulglist";
 
 class Cart extends Component {
     constructor(props) {

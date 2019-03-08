@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
-import Head from '@/common/Head/Head'
-import Logincontentwarp from '@/components/Login/Logincontentwarp/Logincontentwarp'
+import Head from '../components/common/Head/Head'
+import Logincontentwarp from '../components/Login/Logincontentwarp/Logincontentwarp'
 
 export default class Com extends Component{
   render () {
