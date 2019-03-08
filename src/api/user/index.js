@@ -32,6 +32,19 @@ const api = {
        reject(err)
      })
    })
+ },
+//  登入接口数据请求
+ loginData (obj) {
+   console.log(obj)
+   return new Promise((resolve, reject) => {
+     axios.post(baseUrl + '/users/login', obj)
+     .then(data => {
+       resolve(data.data)
+     })
+     .catch(err => {
+       reject(err)
+     })
+   })
  }
 }
 

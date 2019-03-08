@@ -22,7 +22,8 @@ const data2 = TabArray2.map((_val, i) => ({
   text: _val.text
 }));
 
-const Usrtlist = (props) => {
+
+const Usrtlist = ({history}) => {
   return (
     <div>
       <List>
@@ -49,9 +50,11 @@ const Usrtlist = (props) => {
           onClick={() => {}}
         >意见反馈</Item>
       </List>
-      <Button>退出登入</Button>
+      <Button onClick={()=>{localStorage.removeItem('isLogin');history.push({pathname:'/login'})}}>退出登入</Button>
     </div>
   )
 }
+
+  //history.push({pathname:'/login'})
 
 export default Usrtlist

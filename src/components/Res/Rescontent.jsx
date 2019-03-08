@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import api from '@/api/res'
+import api from '@/api/user'
 import './Rescontent.scss'
 import { List, InputItem, Toast, Button } from 'antd-mobile';
 import {Link} from 'react-router-dom'
