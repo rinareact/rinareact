@@ -2,11 +2,11 @@ import axios from 'axios'
 import baseUrl from './../index'
 
 const api = {
-  requestDetail (id) {
+  requestSearch (name) {
     return new Promise((resolve, reject) => {
-      axios.get(baseUrl + '/product/searchI?postID=' + id)
+      axios.get(baseUrl + '/product/searchK?goodsName=' + name)
         .then(data => resolve(data))
-          .catch(err => reject(err))
+        .catch(err => reject(err))
     })
   }
 }

@@ -2,24 +2,27 @@ import React, { Component} from 'react'
 import './Home.scss'
 import { Carousel, WingBlank } from 'antd-mobile';
 import List from '@/components/home/List.jsx';
+import api from '@/api/home/index'
 
 class Com extends Component{
     constructor (props) {
         super(props);
         this.state = {
-            data: ['1', '2', '3'],
+            data: [],
             imgHeight: 200,
         }
     }
 
     componentDidMount() {
-
+        api.requestBanner().then(data => {
+            this.setState({
+                data: data.data.data
+            })
+        })
     }
 
-    searchgoods () {
-        console.log(this)
-        // let txt = document.getElementById('txt')
-        // this.props.history.push('//' + txt.value)
+    goSearch () {
+        this.props.history.push('/search')
     }
 
     render() {
@@ -28,9 +31,9 @@ class Com extends Component{
                 <header className="header">
                     <div className="header-l">
                         <span className='iconfont iconsousuo'></span>
-                        <input type="text" className='txt' placeholder='搜索商品' id='txt' />
+                        <input type="text" className='txt' placeholder='搜索商品'  onClick= { this.goSearch.bind(this) } />
                     </div>
-                    <div className="header-r" onClick= { this.searchgoods.bind(this) }>搜索</div>
+                    <div className="header-r">搜索</div>
                 </header>
                 <div className="banner">
                     <WingBlank>
@@ -42,12 +45,12 @@ class Com extends Component{
                         >
                         {this.state.data.map(val => (
                             <a
-                            key={val}
+                            key={val.id}
                             href="http://www.alipay.com"
                             style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
                             >
                             <img
-                                src={`https://zos.alipayobjects.com/rmsportal/${val}.png`}
+                                src={ val.imgUrl }
                                 alt=""
                                 style={{ width: '100%', verticalAlign: 'top' }}
                                 onLoad={() => {

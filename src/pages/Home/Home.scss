@@ -66,6 +66,9 @@
     margin-top: .44rem;
     .am-wingblank,.am-wingblank-lg {
       margin: 0;
+      img {
+        @include rect(100%, 2rem);
+      }
       .am-carousel-wrap-dot > span {
         @include rect(.1rem, .1rem);
         margin: 0 .06rem;
