@@ -6,7 +6,6 @@ const api = {
  requestData (aphone) {
    console.log(aphone)
   return new Promise((resolve, reject) => {
-    console.log(URL.baseUrlcw)
     axios.get(URL.baseUrlcw + '/users/sendCode?tel=' + aphone)
     .then(data => {
       resolve(data.data)
