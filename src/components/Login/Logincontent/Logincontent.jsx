@@ -81,7 +81,7 @@ class Logincontent extends Component {
   // 跳转注册
   handle(){
     // console.log(this)
-    this.props.history.push({pathname:'/res'})
+    this.props.history.push({pathname:'/userapp/res'})
     //window.location.href='/res' //刷新跳转,不推荐
   }
 

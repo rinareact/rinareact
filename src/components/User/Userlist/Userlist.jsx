@@ -50,7 +50,7 @@ const Usrtlist = ({history}) => {
           onClick={() => {}}
         >意见反馈</Item>
       </List>
-      <Button onClick={()=>{localStorage.removeItem('isLogin');history.push({pathname:'/login'})}}>退出登入</Button>
+      <Button onClick={()=>{localStorage.removeItem('isLogin');history.push({pathname:'/userapp/login'})}}>退出登入</Button>
     </div>
   )
 }

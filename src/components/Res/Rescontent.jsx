@@ -196,7 +196,7 @@ class Rescontent extends Component {
         <div className='qdr'>
           <p>
             已有账号？
-            <Link to='/login'>去登入</Link>
+            <Link to='/userapp/login'>去登入</Link>
           </p>
         </div>
       </div>
