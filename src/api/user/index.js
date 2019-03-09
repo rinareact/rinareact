@@ -1,12 +1,12 @@
 import axios from 'axios'
-import baseUrlcw from '@/api'
+import URL from '@/api'
 
 const api = {
   // 验证码接口数据请求
  requestData (aphone) {
    console.log(aphone)
   return new Promise((resolve, reject) => {
-    axios.get(baseUrlcw + '/users/sendCode?tel=' + aphone)
+    axios.get(URL.baseUrlcw + '/users/sendCode?tel=' + aphone)
     .then(data => {
       resolve(data.data)
       console.log(data)
@@ -22,7 +22,7 @@ const api = {
    return new Promise((resolve, reject) => {
      axios({
        method:'post',
-       url:baseUrlcw + '/users/register', 
+       url:URL.baseUrlcw + '/users/register', 
        data})
      .then (data => {
        resolve(data.data)
@@ -37,7 +37,7 @@ const api = {
  loginData (obj) {
    console.log(obj)
    return new Promise((resolve, reject) => {
-     axios.post(baseUrlcw + '/users/login', obj)
+     axios.post(URL.baseUrlcw + '/users/login', obj)
      .then(data => {
        resolve(data.data)
      })
