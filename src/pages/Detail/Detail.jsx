@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Carousel, WingBlank } from 'antd-mobile'
 import api from '@/api/detail/index'
 import './Detail.scss'
 
@@ -7,12 +6,12 @@ class Detail extends Component {
   constructor (props) {
     super(props);
     this.state = {
-        data: ['1', '2'],
-        imgHeight: 300,
-        number: 1,
-        cartnumber: 0,
-        detailinfo: {},
-        currentIndex: 0
+        data: ['1', '2'],  //轮播图自带数据
+        imgHeight: 300,     //轮播图高度
+        number: 1,          //商品数量  
+        cartnumber: 0,      //购物车数量
+        detailinfo: {},     //请求的数据
+        currentIndex: 0     //
     }
   }
 
@@ -20,7 +19,6 @@ class Detail extends Component {
       //购物车数量
       let cartArr = localStorage.getItem('cartData')
       cartArr = JSON.parse(cartArr)
-      console.log(cartArr)
       if(cartArr===null) {
         this.setState({
           cartnumber: 0
@@ -145,33 +143,7 @@ class Detail extends Component {
           <i className='title'>商品详情</i>
         </header>
         <div className="bannerone">
-          <WingBlank>
-            <Carousel
-            autoplay={false}
-            infinite
-            beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-            afterChange={index => console.log('slide to', index)}
-            >
-            {this.state.data.map(val => (
-                <a
-                key={val}
-                href="http://www.alipay.com"
-                style={{ display: 'inline-block', width: '100%', height: this.state.imgHeight }}
-                >
-                <img
-                    src={`https://zos.alipayobjects.com/rmsportal/${val}.png`}
-                    alt=""
-                    style={{ width: '100%', verticalAlign: 'top' }}
-                    onLoad={() => {
-                    // fire window resize event to change height
-                    window.dispatchEvent(new Event('resize'));
-                    this.setState({ imgHeight: '300' });
-                    }}
-                />
-                </a>
-              ))}
-            </Carousel>
-          </WingBlank>
+          <img src={ this.state.detailinfo.mainPic } alt=""/>
         </div>
         <main className="matter">
           <div className="goodsname">

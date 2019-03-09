@@ -1,5 +1,5 @@
-const proxy = require("http-proxy-middleware");
- 
+const proxy = require('http-proxy-middleware')
+
 module.exports = function(app) {
   app.use(//登入注册接口
     proxy(
@@ -23,4 +23,4 @@ module.exports = function(app) {
       }
     )
   )
-};
+}
