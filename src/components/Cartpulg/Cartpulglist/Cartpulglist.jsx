@@ -9,6 +9,7 @@ class Cartpulglist extends Component{
         super(props);
         this.state = {
             val: 1,
+            cartdata:[],
         };
     };
     onChange1 = (val) => {
@@ -16,20 +17,26 @@ class Cartpulglist extends Component{
         // console.log(val)
     };
 
+    componentDidMount() {
+        this.setState({
+            cartdata : JSON.parse(localStorage.getItem("cartData"))
+        })
+    }
+
     render() {
-        return(
-            <div className={"content-cart"}>
-                <div className={"cart-content-list"} >
+        let arr = [];
+        this.state.cartdata.map((item, index) =>{
+            arr.push(
+                <div className={"cart-content-list"} key={index}>
                     <Flex>
                         <Flex.Item>
                             <AgreeItem data-seed="logId" onChange={e => console.log('checkbox', e)} />
                         </Flex.Item>
                     </Flex>
-                    <div className={"cart-content-list-card"}>
-                        <img src="/images/qiaoba_02.jpg" alt=""/>
-                        <h4>不喜欢这个UI库</h4>
-                        <h5>我喜欢索隆</h5>
-                        <h6>还想养乔巴</h6>
+                    <div className={"cart-content-list-card"} >
+                        <img src={ item.mainPic } alt=""/>
+                        <h4>{ item.goodsName }</h4>
+                        <h5>￥{ item.marketPrice }</h5>
                     </div>
                     <List.Item
                         wrap
@@ -40,19 +47,32 @@ class Cartpulglist extends Component{
                                 max={10}
                                 min={1}
                                 value={this.state.val}
-                                onChange={this.onChange1}
+                                onChange={this.onChange1.bind(this)}
                             />
                         }
                     >
-                        <h6>小计：<span>￥998</span></h6>
+                        <h6>小计：<span>{item.marketPrice*this.state.val}</span></h6>
                     </List.Item>
                 </div>
-                <div className={"cart-content-list-foot"}>
-                    <Button type="warning" className={"cart-content-list-footbutton"}>提交订单</Button>
-                    <div className={"cart-content-list-foottotal"}>
-                        <h5>合计：<span>￥0.00</span></h5>
+            )
+        })
+        return(
+            <div className={"contentb"}>
+                <div className={"content"}>
+                    { arr }
+                    <div className={"cart-content-list-foot"}>
+                        <Button type="warning" className={"cart-content-list-footbutton"}>提交订单</Button>
+                        <div className={"cart-content-list-foottotal"}>
+                            <h5>合计：<span>￥0.00</span></h5>
+                        </div>
                     </div>
                 </div>
+                {/*<div className={"cart-content-list-foot"}>*/}
+                    {/*<Button type="warning" className={"cart-content-list-footbutton"}>提交订单</Button>*/}
+                    {/*<div className={"cart-content-list-foottotal"}>*/}
+                        {/*<h5>合计：<span>￥0.00</span></h5>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
             </div>
         )
     }

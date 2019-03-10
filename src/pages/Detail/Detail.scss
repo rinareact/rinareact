@@ -133,21 +133,9 @@ html, body, #root {
   }
   .bannerone {
     @include rect(100%, 3rem);
-    .am-wingblank,.am-wingblank-lg {
-      margin: 0;
       img {
-        height: 3rem;
-      }
-      .am-carousel-wrap-dot > span {
-        @include rect(.1rem, .1rem);
-        margin: 0 .06rem;
-        border: .01rem solid #f00;
-        background-color: #fff;
-      }
-      .am-carousel-wrap-dot-active > span {
-        background-color: #f00;
-      }
-    }
+        @include rect(100%, 100%);
+      } 
   }
   .matter {
     @include rect(100%, 2rem);
