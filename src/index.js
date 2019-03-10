@@ -9,7 +9,7 @@ import App from './layout/App';
 import DetailApp from './layout/DetailApp';
 import SearchApp from './layout/SearchApp';
 import UserApp from './layout/UserApp';
-
+import DetailApp from './layout/DetailApp'
 import 'antd-mobile/dist/antd-mobile.css';
 import './main.scss';
 

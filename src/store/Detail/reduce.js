@@ -1,5 +1,7 @@
 const reducer = (state = {
-    data: []
+    number: 1,
+    cartnumber: 0,
+    detailinfo: {},
 }, action) => {
     //解出action中的type和payload选项
     let {type, payload} = action;
