@@ -8,8 +8,8 @@ class UserApp extends Component {
     return (
       <div className='box'>
         <Switch>
-          <Route path={'/userapp/login'} component={Login}/>
-          <Route path={'/userapp/res'} component={Res}/>
+          <Route path='/userapp/login' component={Login}/>
+          <Route path='/userapp/res' component={Res}/>
         </Switch>
       </div>
     )

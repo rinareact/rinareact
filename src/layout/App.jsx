@@ -7,7 +7,6 @@ import User from '../pages/User';
 import KindList from '../pages/KindList';
 import Nav from "../components/Nav/Nav";
 
-
 class  App extends Component{
     render(){
         return(
@@ -19,7 +18,7 @@ class  App extends Component{
                     <Route path="/kind" component = {Kind}/>
                     <Route path="/cart" component = {Cart}/>
                     <Route path="/user" component = {User}/>
-                    <Redirect path="/" to="/home"/>
+                    {/* <Redirect path="/" to="/home"/> */}
                 </Switch>
                 <Nav />
             </div>
