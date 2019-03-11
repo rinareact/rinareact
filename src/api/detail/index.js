@@ -1,15 +1,14 @@
 import axios from 'axios'
-import URL from '@/api'
+import URL from './../index'
 
 const api = {
-  requestDetail (id) {
-    return new Promise((resolve, reject) => {
-      console.log(URL.baseUrl,'/product/searchI?postID=', id)
-      axios.get(URL.baseUrl + '/product/searchI?postID=' + id)
-        .then(data => resolve(data))
-          .catch(err => reject(err))
-    })
-  }
+    requestDetail (id) {
+        return new Promise((resolve, reject) => {
+            axios.get(URL.baseUrl + '/product/searchI?postID=' + id)
+                .then(data => resolve(data))
+                .catch(err => reject(err))
+        })
+    }
 }
 
 export default api
