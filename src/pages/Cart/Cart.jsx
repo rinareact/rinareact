@@ -8,10 +8,16 @@ class Cart extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            flag: ['a']
+            flag: ["a"],
+            // cartnumber: 0,
         }
     };
-    onClickRight(){}
+    cilckme(){
+        this.child.changeChild();
+    };
+    onref=(ref)=>{
+        this.child=ref;
+    }
 
     render() {
         return (
@@ -21,10 +27,10 @@ class Cart extends Component {
                         this.props.history.go(-1)
                     }}/>
                     <span className={"cart-top-c"}>购物车</span>
-                    <span className={"cart-top-r"} onClick={"onClickRight"}>删除</span>
+                    <span className={"cart-top-r"} onClick={this.cilckme.bind(this)}>删除</span>
                 </div>
-                {/*<Head title='购物车'></Head>*/}
-                {this.state.flag.length === 0 ? <Cartpulgnone/> : <Cartpulglist/>}
+                {this.state.flag.length === 0 ? <Cartpulgnone/> : <Cartpulglist onRef={this.onref}/>}
+                {/*{this.state.cartnumber > 0 ? <Cartpulglist/>} : <Cartpulgnone/>*/}
             </div>
 
         )
