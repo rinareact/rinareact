@@ -38,7 +38,7 @@ class Com extends Component{
                 <div className="banner">
                     <WingBlank>
                         <Carousel
-                        autoplay={false}
+                        autoplay={true}
                         infinite
                         beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
                         afterChange={index => console.log('slide to', index)}
