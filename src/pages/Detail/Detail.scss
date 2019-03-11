@@ -3,6 +3,9 @@ html, body, #root {
   overflow: auto;
   height: 100%;
 }
+html {
+  font-size: 26.67vw;
+}
 .detailpage {
   background-color: #eee;
   width: 100%;
