@@ -4,7 +4,9 @@ import Home from '../pages/Home';
 import Kind from '../pages/Kind';
 import Cart from '../pages/Cart';
 import User from '../pages/User';
+import KindList from '../pages/KindList';
 import Nav from "../components/Nav/Nav";
+
 
 class  App extends Component{
     render(){
@@ -12,6 +14,7 @@ class  App extends Component{
             <BrowserRouter>
             <div className="box">
                 <Switch>
+                    <Route path="/kindlist" component={ KindList }/>
                     <Route path="/home" component = {Home}/>
                     <Route path="/kind" component = {Kind}/>
                     <Route path="/cart" component = {Cart}/>
