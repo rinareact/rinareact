@@ -123,7 +123,13 @@ class Detail extends Component {
     if (cartArr===null) {
       cartArr = [params]
     } else {
-      cartArr.push(params)
+      cartArr.map((item, index) => {
+        if(item.id = params.id) {
+          item.number += 1
+        } else {
+          cartArr.push(params)
+        }
+      })
     }
     this.setState({
       cartnumber: cartArr.length
