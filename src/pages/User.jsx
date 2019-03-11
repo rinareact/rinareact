@@ -7,7 +7,7 @@ export default class Com extends Component{
         return(
             <div className="content">
               <Userhead/>
-              <Userlist {...this.props}/>
+              <Userlist history={this.props.history}/>
             </div>
         )
     }
